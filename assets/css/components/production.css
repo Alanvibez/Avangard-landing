@@ -1,0 +1,136 @@
+.production{
+    padding-top: 214px; 
+    padding-bottom: 270px;
+    background: #0E1414;
+}
+
+.production__title{
+    margin-bottom: 45px;
+}
+
+.production__list{
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+}
+
+.production__list-item{
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.production__list-item:nth-child(even){
+  flex-direction: row-reverse;
+}
+
+.production__content{
+    border: 1px solid #2B3232;
+    background: #182222;
+    padding-top: 45px;
+    padding-left: 55px;
+    min-height: 409px;
+    width: 645px;
+}
+
+.production__content-title{
+    font-family: var(--oswald);
+    font-size: 30px;
+    font-weight: 400;
+    color: var(--yellow);
+    text-transform: uppercase;
+    margin-bottom: 26px;
+}
+
+.production__content-text{
+
+}
+
+.production__image{
+    height: 466px;
+    position: relative;
+}
+
+.production__image::before{
+    content: attr(data-text);
+    border-radius: 2px;
+    color: black;
+    font-size: 12px;
+    font-family: var(--montserrat);
+    font-weight: 600;
+    display: block;
+    padding: 0 28px;
+    position: absolute;
+    height: 37px;
+    background: var(--yellow);
+}
+
+.production__list-item:nth-child(odd) .production__image:before{
+    left: -100px;
+    top: 50px;
+}
+
+.production__list-item:nth-child(even) .production__image:before{
+    right: -100px;
+}
+
+@media (max-width:1200px){
+    .production__image::before{
+        display: none;
+    }
+
+    .production__list-item{
+        align-items: center;
+    }
+
+    .production__content{
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-bottom: 50px;
+        width: 50%;
+    }
+
+    .production__content-text{
+        font-size: 16px;
+    }
+
+    .production__image{
+        height: auto;
+        width: 50%;
+    }
+}
+
+@media (max-width:900px){
+    .production{
+        padding-top: 50px;
+        padding-bottom: 60px;
+    }
+
+    .production__list-item{
+        flex-direction: column-reverse !important;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .production__content,.production__image{
+        width: 100%;
+    }
+
+    .production__content{
+        padding-left: 17px;
+        padding-right: 10px;
+        padding-top: 30px;
+        min-height: fit-content;
+    }
+
+    .production__content-title{
+        font-size: 26px;
+        margin-bottom: 22px;
+    }
+
+    .production__image{
+        width: 80%;
+    }
+}
+
