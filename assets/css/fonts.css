@@ -1,7 +1,7 @@
 /* Подключение разных начертаний шрифта Montserrat в формате TrueType (TTF) для всех весов */
 @font-face {
     font-family: 'Montserrat';
-    src: url('/Avangard-landing/assets/fonts/Montserrat/Montserrat-Black.ttf') format('truetype');
+    src: url('fonts/Montserrat/Montserrat-Black.ttf') format('truetype');
     font-weight: 900; /* Black */
     font-style: normal;
   }
