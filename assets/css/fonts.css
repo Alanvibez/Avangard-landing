@@ -1,56 +1,56 @@
 /* Подключение разных начертаний шрифта Montserrat в формате TrueType (TTF) для всех весов */
 @font-face {
     font-family: 'Montserrat';
-    src: url('../fonts/Montserrat/Montserrat-Black.ttf') format('truetype');
+    src: url('/Avangard-landing/assets/fonts/Montserrat/Montserrat-Black.ttf') format('truetype');
     font-weight: 900; /* Black */
     font-style: normal;
   }
   
   @font-face {
     font-family: 'Montserrat';
-    src: url('../fonts/Montserrat/Montserrat-Bold.ttf') format('truetype');
+    src: url('/Avangard-landing/assets/fonts/Montserrat/Montserrat-Bold.ttf') format('truetype');
     font-weight: bold;
     font-style: normal;
   }
   
   @font-face {
     font-family: 'Montserrat';
-    src: url('../fonts/Montserrat/Montserrat-ExtraBold.ttf') format('truetype');
+    src: url('/Avangard-landing/assets/fonts/Montserrat/Montserrat-ExtraBold.ttf') format('truetype');
     font-weight: 800; /* Extra Bold */
     font-style: normal;
   }
   
   @font-face {
     font-family: 'Montserrat';
-    src: url('../fonts/Montserrat/Montserrat-Light.ttf') format('truetype');
+    src: url('/Avangard-landing/assets/fonts/Montserrat/Montserrat-Light.ttf') format('truetype');
     font-weight: 300; /* Light */
     font-style: normal;
   }
   
   @font-face {
     font-family: 'Montserrat';
-    src: url('../fonts/Montserrat/Montserrat-Medium.ttf') format('truetype');
+    src: url('/Avangard-landing/assets/fonts/Montserrat/Montserrat-Medium.ttf') format('truetype');
     font-weight: 500; /* Medium */
     font-style: normal;
   }
   
   @font-face {
     font-family: 'Montserrat';
-    src: url('../fonts/Montserrat/Montserrat-Regular.ttf') format('truetype');
+    src: url('/Avangard-landing/assets/fonts/Montserrat/Montserrat-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
   }
   
   @font-face {
     font-family: 'Montserrat';
-    src: url('../fonts/Montserrat/Montserrat-SemiBold.ttf') format('truetype');
+    src: url('/Avangard-landing/assets/fonts/Montserrat/Montserrat-SemiBold.ttf') format('truetype');
     font-weight: 600; /* Semi-Bold */
     font-style: normal;
   }
   
   @font-face {
     font-family: 'Montserrat';
-    src: url('../fonts/Montserrat/Montserrat-Thin.ttf') format('truetype');
+    src: url('/Avangard-landing/assets/fonts/Montserrat/Montserrat-Thin.ttf') format('truetype');
     font-weight: 100; /* Thin */
     font-style: normal;
   }
@@ -58,49 +58,49 @@
 /* Подключение разных начертаний шрифта Oswald в формате TrueType (TTF) для указанных весов */
 @font-face {
     font-family: 'Oswald';
-    src: url('../fonts/Oswald/Oswald-Bold.ttf') format('truetype');
+    src: url('/Avangard-landing/assets/fonts/Oswald/Oswald-Bold.ttf') format('truetype');
     font-weight: bold;
     font-style: normal;
   }
   
   @font-face {
     font-family: 'Oswald';
-    src: url('../fonts/Oswald/Oswald-ExtraLight.ttf') format('truetype');
+    src: url('/Avangard-landing/assets/fonts/Oswald/Oswald-ExtraLight.ttf') format('truetype');
     font-weight: 200; /* Extra Light */
     font-style: normal;
   }
   
   @font-face {
     font-family: 'Oswald';
-    src: url('../fonts/Oswald/Oswald-Light.ttf') format('truetype');
+    src: url('/Avangard-landing/assets/fonts/Oswald/Oswald-Light.ttf') format('truetype');
     font-weight: 300; /* Light */
     font-style: normal;
   }
   
   @font-face {
     font-family: 'Oswald';
-    src: url('../fonts/Oswald/Oswald-Medium.ttf') format('truetype');
+    src: url('/Avangard-landing/assets/fonts/Oswald/Oswald-Medium.ttf') format('truetype');
     font-weight: 500; /* Medium */
     font-style: normal;
   }
   
   @font-face {
     font-family: 'Oswald';
-    src: url('../fonts/Oswald/Oswald-Regular.ttf') format('truetype');
+    src: url('/Avangard-landing/assets/fonts/Oswald/Oswald-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
   }
   
   @font-face {
     font-family: 'Oswald';
-    src: url('../fonts/Oswald/Oswald-SemiBold.ttf') format('truetype');
+    src: url('/Avangard-landing/assets/fonts/Oswald/Oswald-SemiBold.ttf') format('truetype');
     font-weight: 600; /* Semi-Bold */
     font-style: normal;
   }
 
   @font-face {
     font-family: 'Open Sans';
-    src: url('../fonts/OpenSans/OpenSans-Regular.ttf') format('truetype');
+    src: url('/Avangard-landing/assets/fonts/OpenSans/OpenSans-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
   }
