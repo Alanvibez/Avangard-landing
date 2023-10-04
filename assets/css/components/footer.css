@@ -61,9 +61,8 @@
     gap: 10px;
 }
 
-.footer__privacy{
-    text-align: center;
-    justify-content: center;
+.footer__company-name{
+    font-size: 16px;
 }
 
 .footer__privacy,
@@ -71,6 +70,20 @@
 .footer__company{
     display: flex;
     align-items: center;
+}
+
+.footer__company{
+    flex-direction: column;
+}
+
+.footer__company-logo{
+    margin-bottom: 10px;
+}
+
+.footer__privacy{
+    text-align: center;
+    justify-content: center;
+    text-decoration: underline;
 }
 
 @media (max-width:900px){
@@ -88,6 +101,11 @@
 
     .footer__privacy{
         justify-content: flex-start;
+        font-size: 15px;
+    }
+
+    .footer__company{
+        display: block;
     }
 
     .footer__nav a{
