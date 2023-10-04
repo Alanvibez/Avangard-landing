@@ -27,6 +27,12 @@
 
     .slider-gallery{
         height: 400px;
+        padding: 0 10px;
+    }
+
+    .slider-gallery .swiper-button-prev,
+    .slider-gallery .swiper-button-next{
+        display: none;
     }
 }
 

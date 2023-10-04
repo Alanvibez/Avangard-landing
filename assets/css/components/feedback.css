@@ -30,6 +30,14 @@
         padding-top: 48px;
     }
 
+    .feedback__title{
+        margin-bottom: 13px;
+    }
+
+    .feedback__text{
+        margin-bottom: 30px;
+    }
+
     .feedback__inner-form{
         padding-top: 0;
         padding-bottom: 32px;
@@ -40,7 +48,9 @@
         max-width: 100%;
     }
 
-    .feedback__image{
-        margin: 0 -44px;
+    .feedback__inner-image{
+        min-height: 200px;
+        max-height: 320px;
+        margin: 0 -20px;
     }
 }

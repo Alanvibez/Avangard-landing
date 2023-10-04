@@ -14,6 +14,21 @@ $(document).ready(() => {
         }
     });
 
+    // Якорь
+
+    $('.nav__list li a').on('click', function(e){
+        e.preventDefault()
+        const targetSection = $(this).attr('href')
+        
+        if($(this).closest('.header__menu')){
+            $('[data-burger]').click()
+        }
+
+        $('html, body').animate({
+            scrollTop: $(targetSection).offset().top
+        }, 1000);
+    })
+
     // Бургер
     $("[data-burger]").on("click", function () {
         $(this).toggleClass("active");
