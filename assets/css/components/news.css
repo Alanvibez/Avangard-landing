@@ -7,16 +7,16 @@
     margin-bottom: 100px;
 }
 
-.news__slider{
+.news-slider{
     height: 660px;
 }
 
-.news__arrows{
+.news-arrows{
     height: 105px;
     width: 312px;
 }
 
-.news__arrows .slider-arrow{
+.news-arrows .slider-arrow{
     border: .5px solid #E2E2E2;
     border-top: 0;
     
@@ -89,7 +89,7 @@
 }
 
 @media (max-width:900px){
-    .news__arrows{
+    .news-arrows{
         width: 100%;
         height: 80px;
     }
@@ -127,7 +127,7 @@
         height: 50%;
     }
 
-    .news__slider{
+    .news-slider{
         height: 500px;
     }
 }
