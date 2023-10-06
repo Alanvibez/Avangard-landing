@@ -31,16 +31,16 @@
   cursor: pointer;
 }
 
-[data-slider-arrow] img {
+[data-slider-arrow] i {
   transition: all 0.4s ease-in;
 }
 
-[data-slider-arrow="left"]:hover img {
-  transform: translateX(-5px);
+[data-slider-arrow="left"]:hover i {
+  color: var(--yellow);
 }
 
-[data-slider-arrow="right"]:hover img {
-  transform: translateX(5px);
+[data-slider-arrow="right"]:hover i {
+  color: var(--yellow);
 }
 
 /* product slider */
