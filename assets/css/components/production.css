@@ -43,10 +43,6 @@
     margin-bottom: 26px;
 }
 
-.production__content-text{
-
-}
-
 .production__image{
     height: 466px;
     position: relative;
@@ -96,7 +92,6 @@
     }
 
     .production__image{
-        height: auto;
         width: 50%;
     }
 }
@@ -110,7 +105,7 @@
     .production__list-item{
         flex-direction: column-reverse !important;
         align-items: center;
-        gap: 10px;
+        gap: 25px;
     }
 
     .production__content,.production__image{
@@ -129,8 +124,8 @@
         margin-bottom: 22px;
     }
 
-    .production__image{
-        width: 80%;
+    .production__image img{
+        height: auto;
     }
 }
 
