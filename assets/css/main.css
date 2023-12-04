@@ -250,17 +250,18 @@ input::placeholder {
    background: #00000061;
    z-index: 9999;
    padding: 20px;
-   animation: fadeIn .2s ease-in-out;
+   animation: fadeIn 0.2s ease-in-out;
 }
 
-.modal.open{
+.modal.open {
    display: flex;
 }
 
-@keyframes fadeIn{
-   0%{
+@keyframes fadeIn {
+   0% {
       opacity: 0;
-   }100%{
+   }
+   100% {
       opacity: 1;
    }
 }
@@ -273,7 +274,7 @@ input::placeholder {
    position: relative;
 }
 
-.modal__container-close{
+.modal__container-close {
    position: absolute;
    right: 11px;
    top: 11px;
@@ -288,7 +289,7 @@ input::placeholder {
    cursor: pointer;
 }
 
-.modal__container-inner{
+.modal__container-inner {
    display: flex;
    flex-direction: column;
    align-items: center;
@@ -304,7 +305,7 @@ input::placeholder {
    font-weight: 400;
    line-height: 43px;
    text-transform: uppercase;
-   margin-bottom: 5px;  
+   margin-bottom: 5px;
 }
 
 .modal__text {
@@ -316,7 +317,7 @@ input::placeholder {
    margin-bottom: 20px;
 }
 
-.modal__button{
+.modal__button {
    width: 100%;
 }
 
@@ -402,21 +403,21 @@ input::placeholder {
    }
 }
 
-@media (max-width:420px){
+@media (max-width: 420px) {
    .modal__title {
-      font-size: 18px; 
+      font-size: 18px;
    }
-   
+
    .modal__text {
       font-size: 12px;
       line-height: 20px;
    }
 
-   .modal__image{
+   .modal__image {
       max-width: 80%;
    }
 
-   .modal__container{
+   .modal__container {
       padding-top: 68px;
       padding-bottom: 48px;
    }
