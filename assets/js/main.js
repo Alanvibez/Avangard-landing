@@ -52,21 +52,47 @@ $(document).ready(() => {
         const $inputs = $(this).find(".input");
         const $name = $("#name");
         const $mail = $("#email");
+        const isValid = true
 
         // Валидация на пустую строку
         if ($name.val().trim() === "" || $mail.val().trim() === "") {
             $inputs.addClass("error");
-            return;
+            isValid = false;
         }
 
         const emailPattern =
             /^[-a-z0-9!#$%&'*+/=?^_`{|}~]+(?:\.[-a-z0-9!#$%&'*+/=?^_`{|}~]+)*@(?:[a-z0-9]([-a-z0-9]{0,61}[a-z0-9])?\.)*(?:aero|arpa|asia|biz|cat|com|coop|edu|gov|info|int|jobs|mil|mobi|museum|name|net|org|pro|tel|travel|[a-z][a-z])$/;
         if (!emailPattern.test($mail.val().trim())) {
             $mail.addClass("error");
-            return;
+            sValid = false;
         }
 
+        
+
+        if(isValid){
         $inputs.removeClass("error validate").val("");
+        // собираем данные с формы
+        let user_name = $name.val();
+        let user_email = $mail.val();
+        // отправляем данные
+        $.ajax({
+            url: "contact.php",
+            type: "post",
+            data: {
+                "name": user_name,
+                "email": user_email,
+            },
+            error: function () {
+                $("#erconts").html("Произошла ошибка!");
+            },
+            success: function (result) {
+                /* В случае удачной обработки и отправки выполнится следующий код*/
+                $name.val('');
+                // $('#tel-desktop').val('');
+                $mail.val('');
+            }
+        });
+        }
     });
 
     // Слайдер
