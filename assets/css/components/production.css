@@ -45,37 +45,10 @@
 
 .production__image{
     height: 466px;
-    position: relative;
-}
-
-.production__image::before{
-    content: attr(data-text);
-    border-radius: 2px;
-    color: black;
-    font-size: 12px;
-    font-family: var(--montserrat);
-    font-weight: 600;
-    display: block;
-    padding: 0 28px;
-    position: absolute;
-    height: 37px;
-    background: var(--yellow);
-}
-
-.production__list-item:nth-child(odd) .production__image:before{
-    left: -100px;
-    top: 50px;
-}
-
-.production__list-item:nth-child(even) .production__image:before{
-    right: -100px;
+   
 }
 
 @media (max-width:1200px){
-    .production__image::before{
-        display: none;
-    }
-
     .production__list-item{
         align-items: center;
     }
