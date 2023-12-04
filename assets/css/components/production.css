@@ -124,8 +124,17 @@
         margin-bottom: 22px;
     }
 
-    .production__image img{
+    .production__image{
+        display: flex;
+        justify-content: center;
         height: auto;
+    }
+}
+
+@media (max-width:420px){
+    
+    .production__content{
+        min-height: 450px;
     }
 }
 
