@@ -234,8 +234,90 @@ input::placeholder {
    width: 50%;
 }
 
-.show-md{
+.show-md {
    display: none !important;
+}
+
+.modal {
+   position: fixed;
+   display: none;
+   align-items: center;
+   justify-content: center;
+   width: 100%;
+   height: 100%;
+   left: 0;
+   top: 0;
+   background: #00000061;
+   z-index: 9999;
+   padding: 20px;
+   animation: fadeIn .2s ease-in-out;
+}
+
+.modal.open{
+   display: flex;
+}
+
+@keyframes fadeIn{
+   0%{
+      opacity: 0;
+   }100%{
+      opacity: 1;
+   }
+}
+
+.modal__container {
+   background: #182222;
+   max-width: 615px;
+   width: 100%;
+   padding: 75px 10px 60px;
+   position: relative;
+}
+
+.modal__container-close{
+   position: absolute;
+   right: 11px;
+   top: 11px;
+   width: 44px;
+   height: 44px;
+   border-radius: 50%;
+   border: 1px solid #524426;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   color: white;
+   cursor: pointer;
+}
+
+.modal__container-inner{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   color: white;
+   max-width: 315px;
+   width: 100%;
+   margin: 0 auto;
+}
+
+.modal__title {
+   font-family: var(--oswald);
+   font-size: 24px;
+   font-weight: 400;
+   line-height: 43px;
+   text-transform: uppercase;
+   margin-bottom: 5px;  
+}
+
+.modal__text {
+   text-align: center;
+   font-family: var(--montserrat);
+   font-size: 18px;
+   font-weight: 400;
+   line-height: 27px;
+   margin-bottom: 20px;
+}
+
+.modal__button{
+   width: 100%;
 }
 
 @media (max-width: 1200px) {
@@ -254,11 +336,11 @@ input::placeholder {
 }
 
 @media (max-width: 900px) {
-   .show-md{
+   .show-md {
       display: block !important;
    }
 
-   .hide-md{
+   .hide-md {
       display: none !important;
    }
 
@@ -313,9 +395,29 @@ input::placeholder {
       width: 100%;
    }
 
-   .input{
+   .input {
       font-size: 16px;
       padding: 10px 17px;
       line-height: 27px;
+   }
+}
+
+@media (max-width:420px){
+   .modal__title {
+      font-size: 18px; 
+   }
+   
+   .modal__text {
+      font-size: 12px;
+      line-height: 20px;
+   }
+
+   .modal__image{
+      max-width: 80%;
+   }
+
+   .modal__container{
+      padding-top: 68px;
+      padding-bottom: 48px;
    }
 }
