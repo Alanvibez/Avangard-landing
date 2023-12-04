@@ -304,6 +304,7 @@ input::placeholder {
       height: 54px;
       font-size: 20px;
       font-family: var(--oswald);
+      font-weight: 400;
    }
 
    .form__footer-message {
@@ -314,5 +315,7 @@ input::placeholder {
 
    .input{
       font-size: 16px;
+      padding: 10px 17px;
+      line-height: 27px;
    }
 }

@@ -20,7 +20,7 @@ $(document).ready(() => {
         e.preventDefault()
         const targetSection = $(this).attr('href')
         
-        if($(this).closest('.header__menu')){
+        if($(this).closest('.header__menu') && $('[data-burger]').hasClass('active')){
             $('[data-burger]').click()
         }
 
