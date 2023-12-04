@@ -62,7 +62,10 @@
 }
 
 .footer__company-name{
-    font-size: 16px;
+    font-size: 20px;
+    text-transform: uppercase;
+    text-decoration: underline;
+    font-family: var(--oswald);
 }
 
 .footer__privacy,
@@ -74,6 +77,8 @@
 
 .footer__company{
     flex-direction: column;
+    justify-content: center;
+    padding-top: 0px !important;
 }
 
 .footer__company-logo{

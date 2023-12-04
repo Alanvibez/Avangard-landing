@@ -51,7 +51,7 @@ $(document).ready(() => {
 
         const $inputs = $(this).find(".input");
         const $name = $("#name");
-        const $mail = $("#mail");
+        const $mail = $("#email");
 
         // Валидация на пустую строку
         if ($name.val().trim() === "" || $mail.val().trim() === "") {

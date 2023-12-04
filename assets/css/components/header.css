@@ -11,10 +11,6 @@
     align-items: center;
 }
 
-.header__nav{
-    margin-left: 86px;
-}
-
 .header__button{
     margin-left: auto;
 }
@@ -46,12 +42,6 @@
     font-size: 16px;
     font-weight: 400;
     text-transform: uppercase;
-}
-
-@media (max-width:1200px){
-    .header__nav{
-        margin-left: auto;
-    }
 }
 
 @media (max-width:900px){

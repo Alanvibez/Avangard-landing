@@ -42,17 +42,15 @@
     border: 1px solid #2B3232;
     background: #182222;
     flex: 1;
-    padding: 42px 50px 24px 50px;
+    padding: 25px 40px 30px 35px;
     display: flex;
     flex-direction: column;
 }
 
 .about__card-icon{
-    border: 1px solid var(--yellow);
-    border-radius: 50%;
-    width: 80px;
-    height: 80px;
     margin-bottom: 41px;
+    font-size: 75px;
+    color: var(--yellow);
 }
 
 .about__card-title{
@@ -88,7 +86,8 @@
     }
 
     .about__card-icon{
-        margin-bottom: 32px;
+        margin-bottom: 40px;
+        font-size: 87px;
     }
 
     .about__card-text{
@@ -96,6 +95,6 @@
     }
 
     .about__card-title{
-        font-size: 26px;
+        font-size: 22px;
     }
 }

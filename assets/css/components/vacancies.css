@@ -25,64 +25,47 @@
 }
 
 .vacancies__card {
-   padding: 27px 34px 21px 26px;
+   padding: 27px 32px 21px 26px;
    border: 1px solid #2b3232;
    display: flex;
    flex-direction: column;
    justify-content: space-between;
    cursor: pointer;
    background: white;
-   transition: all .2s ease-in;
+   transition: all 0.2s ease-in;
 }
 
-.vacancies__card:hover{
+.vacancies__card:hover {
    transform: scale(1.03);
    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
-.vacancies__card.vacancies__card--dark {
-   background: var(--seconddark);
-}
-
-.vacancies__card.vacancies__card--dark .vacancies__card-name {
-   color: var(--yellow);
-}
-
-.vacancies__card.vacancies__card--dark .vacancies__card-mode {
-   color: white;
-}
-
-.vacancies__card.vacancies__card--intro .vacancies__card-mode {
-   font-size: 160px;
-   line-height: 140px;
-}
-
-.vacancies__card.vacancies__card--intro .vacancies__card-name {
-   font-size: 56px;
-}
-
-.vacancies__card-text-mode,
-.vacancies__card-button-name {
+.vacancies__card-head {
    display: flex;
+   align-items: center;
    justify-content: space-between;
 }
 
-.vacancies__card-button-name {
-   align-items: center;
+.vacancies__card-price {
+   color: #182222;
+   font-family: var(--oswald);
+   font-size: 35px;
+   font-weight: 300;
 }
 
 .vacancies__card-mode {
-   color: #182222;
    font-family: var(--oswald);
-   font-size: 58px;
+   font-size: 50px;
    font-weight: 300;
+   line-height: 50px;
+   color: var(--yellow);
 }
 
 .vacancies__card-text {
    font-family: var(--oswald);
    font-size: 24px;
    color: white;
-   font-weight: 400px;
+   font-weight: 400;
    text-transform: uppercase;
    line-height: 43px;
    max-width: 514px;
@@ -102,10 +85,46 @@
 
 .vacancies__card-name {
    font-family: var(--oswald);
-   font-size: 43px;
+   font-size: 40px;
    text-transform: uppercase;
    font-weight: 400;
    color: #182222;
+}
+
+.vacancies__card.vacancies__card--dark {
+   background: var(--seconddark);
+}
+
+.vacancies__card.vacancies__card--dark .vacancies__card-name {
+   color: var(--yellow);
+}
+
+.vacancies__card.vacancies__card--dark .vacancies__card-price {
+   color: white;
+}
+
+.vacancies__card.vacancies__card--intro .vacancies__card-mode {
+   font-size: 160px;
+   line-height: 140px;
+   color: white;
+}
+
+.vacancies__card.vacancies__card--intro .vacancies__card-name {
+   font-size: 56px;
+}
+
+.vacancies__card-text-mode,
+.vacancies__card-button-name {
+   display: flex;
+   justify-content: space-between;
+}
+
+.vacancies__card-text-mode{
+   margin-bottom: 43px;
+}
+
+.vacancies__card-button-name {
+   align-items: center;
 }
 
 .vacancies__card.vacancies__card--intro .vacancies__card-name-mobile {
@@ -136,75 +155,79 @@
 }
 
 @media (max-width: 900px) {
-    .vacancies {
-        padding-top: 33px;
-        padding-bottom: 63px;
-     }
-     
-     .vacancies__title {
-        margin-bottom: 31px;
-     }
-     
-     .vacancies__grid {
-        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-        grid-template-rows: auto;
-     }
-     
-     .vacancies__card {
-        padding: 10px 8px;
-        min-height: 234px;
-     }
+   .vacancies {
+      padding-top: 33px;
+      padding-bottom: 63px;
+   }
 
-     .vacancies__card-text {
-        text-transform: unset;
-        font-size: 26px;
-        font-weight: 300;
-        margin-bottom: 20px;
-     }
-     
-     .vacancies__card-text-mode {
-        flex-wrap: wrap;
-     }
-     
-     .vacancies__card-button {
-        width: 100%;
-     }
-     
-     .vacancies__card--intro,
-     .vacancies__card:last-child {
-        grid-column: span 1;
-     }
-     
-     .vacancies__card-mode {
-        font-size: 26px;
-     }
-     
-     .vacancies__card-name,
-     .vacancies__card.vacancies__card--intro .vacancies__card-name{
-        font-size: 26px;
-     }
-     
-     .vacancies__card-address-item {
-        font-size: 16px;
-        line-height: 22px;
-     }
+   .vacancies__title {
+      margin-bottom: 31px;
+   }
 
-     .vacancies__card-address-item:not(:last-child){
-        margin-bottom: 5px;
-     }
-     
-     .vacancies__card.vacancies__card--intro .vacancies__card-name-mobile {
-        display: inline;
-     }
-     
-     .vacancies__card.vacancies__card--intro .vacancies__card-name:not(.vacancies__card-name-mobile) {
-        display: none;
-     }
-     
-     .vacancies__card.vacancies__card--intro .vacancies__card-mode {
-        font-size: 56px;
-        line-height: normal;
-        margin-bottom: 10px;
-     }
-     
+   .vacancies__grid {
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      grid-template-rows: auto;
+   }
+
+   .vacancies__card {
+      padding: 10px 8px;
+      min-height: 234px;
+   }
+
+   .vacancies__card-text {
+      text-transform: unset;
+      font-size: 26px;
+      font-weight: 300;
+      margin-bottom: 20px;
+   }
+
+   .vacancies__card-text-mode {
+      flex-wrap: wrap;
+      margin-bottom: 30px;
+   }
+
+   .vacancies__card-price{
+      font-size: 26px;
+   }
+
+   .vacancies__card-button {
+      width: 100%;
+   }
+
+   .vacancies__card--intro,
+   .vacancies__card:last-child {
+      grid-column: span 1;
+   }
+
+   .vacancies__card-mode {
+      font-size: 26px;
+   }
+
+   .vacancies__card-name,
+   .vacancies__card.vacancies__card--intro .vacancies__card-name {
+      font-size: 26px;
+   }
+
+   .vacancies__card-address-item {
+      font-size: 16px;
+      line-height: 22px;
+   }
+
+   .vacancies__card-address-item:not(:last-child) {
+      margin-bottom: 5px;
+   }
+
+   .vacancies__card.vacancies__card--intro .vacancies__card-name-mobile {
+      display: inline;
+   }
+
+   .vacancies__card.vacancies__card--intro
+      .vacancies__card-name:not(.vacancies__card-name-mobile) {
+      display: none;
+   }
+
+   .vacancies__card.vacancies__card--intro .vacancies__card-mode {
+      font-size: 56px;
+      line-height: normal;
+   }
 }
