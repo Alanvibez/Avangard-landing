@@ -34,6 +34,9 @@
 
 .header__menu-phone{
     margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 .header__menu-phone a{
