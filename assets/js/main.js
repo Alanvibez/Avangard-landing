@@ -140,7 +140,13 @@ $(document).ready(() => {
                }
             }
          };
+
+         if($parent.find('.swiper-slide').length <= 2 && $(window).width() >= 900){
+            $parent.find('.slider-arrows').remove()
+         }
       }
+
+      
 
       const slider = new Swiper($slider, settings);
       slider.init();
