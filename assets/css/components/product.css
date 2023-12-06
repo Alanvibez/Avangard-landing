@@ -162,7 +162,7 @@
 
    .product__info {
       padding: 24px 25px;
-      flex: 2;
+      height: 100%;
    }
 
    .product__info-icon {
@@ -194,7 +194,6 @@
    }
 
    .product__images {
-      flex: 0;
-      height: 40%;
+      height: 210px;
    }
 }
