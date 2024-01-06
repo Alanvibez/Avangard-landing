@@ -6,7 +6,7 @@
    padding: 0;
 }
 
-body{
+body {
    font-family: var(--montserrat);
 }
 
@@ -126,7 +126,8 @@ button {
    border: 1px solid var(--border);
    color: white;
    font-size: 20px;
-   height: 54px;
+   height: auto;
+   min-height: 54px;
    display: flex;
    justify-content: center;
    align-items: center;
@@ -151,7 +152,7 @@ button {
 
 .input {
    background: none;
-   border: 1px solid rgba(249, 249, 249, 0.12);
+   border: 1px solid #e2e2e2;
    padding: 25px 30px;
    display: block;
    width: 100%;
@@ -215,15 +216,17 @@ input::placeholder {
    font-weight: 400;
 }
 
+.form {
+   width: 100%;
+}
+
 .form__row {
    display: flex;
 }
 
-.form__col{
+.form__col {
    display: flex;
    flex-direction: column;
-   gap: 10px;
-   margin-bottom: 10px;
 }
 
 .form__footer-button {
@@ -281,14 +284,19 @@ input::placeholder {
    background: #182222;
    max-width: 615px;
    width: 100%;
-   padding: 75px 10px 60px;
+   padding: 114px 10px 121px;
    position: relative;
+}
+
+.modal__container--white {
+   background: white;
+   color: black;
 }
 
 .modal__container-close {
    position: absolute;
-   right: 11px;
-   top: 11px;
+   right: 30px;
+   top: 30px;
    width: 44px;
    height: 44px;
    border-radius: 50%;
@@ -296,7 +304,7 @@ input::placeholder {
    display: flex;
    align-items: center;
    justify-content: center;
-   color: white;
+   color: inherit;
    cursor: pointer;
 }
 
@@ -304,7 +312,7 @@ input::placeholder {
    display: flex;
    flex-direction: column;
    align-items: center;
-   color: white;
+   color: inherit;
    max-width: 315px;
    width: 100%;
    margin: 0 auto;

@@ -1,12 +1,13 @@
 $(document).ready(() => {
    // Табы
+   const tabs = $('[data-tab]')
    $("[data-tab]").on("click", function () {
-      const index = $(this).index();
+      const index = tabs.index(this);
 
       if (!$(this).hasClass("active")) {
-         const parent = $(this).parent();
+         const parent = $(this).closest('[data-tabs-container]');
          const tabs = parent.find("[data-tab]");
-         const block = $("[data-tab-content]");
+         const block = parent.find("[data-tab-content]");
 
          tabs.removeClass("active");
          $(this).addClass("active");
@@ -60,10 +61,15 @@ $(document).ready(() => {
       $("body").css("overflow", $(this).hasClass("active") ? "hidden" : "");
    });
 
-
    $("[data-modal-close]").on("click", function () {
       $(this).closest(".modal").removeClass("open");
       $("body").css("overflow", "");
+   });
+
+   $("[data-modal-open]").on("click", function (e) {
+      e.preventDefault()
+      const modal = $(this).attr('data-modal-open')
+      $(`[data-modal=${modal}]`).addClass('open')
    });
 
    // Слайдер
@@ -90,6 +96,14 @@ $(document).ready(() => {
             spaceBetween: 20,
             speed: 600
          };
+      }
+
+      if(sliderType === "vacancies") {
+         settings = {
+            ...settings,
+            slidesPerView: 5,
+            loop:false
+         }
       }
 
       if (sliderType === "news") {

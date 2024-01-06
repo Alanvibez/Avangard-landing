@@ -131,6 +131,16 @@
    display: none;
 }
 
+.vacancies__modal-title{
+   font-size: 38px;
+   margin-bottom: 57px;
+}
+
+.vacancies__modal_container-inner{
+   max-width: 407px;
+   align-items: start;
+}
+
 @media (max-width: 1200px) {
    .vacancies__card-name {
       font-size: 32px;

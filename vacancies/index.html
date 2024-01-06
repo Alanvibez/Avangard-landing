@@ -2,14 +2,14 @@
    <head>
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <link rel="stylesheet" href="./assets/css/libs.css" />
-      <link rel="stylesheet" href="./assets/css/root.css" />
-      <link rel="stylesheet" href="./assets/fonts/icomoon/style.css" />
-      <link rel="stylesheet" href="./assets/css/fonts.css" />
-      <link rel="stylesheet" href="./assets/css/slider.css" />
-      <link rel="stylesheet" href="./assets/css/main.css" />
-      <script src="./assets/js/libs.js"></script>
-      <script src="./assets/js/main.js"></script>
+      <link rel="stylesheet" href="/assets/css/libs.css" />
+      <link rel="stylesheet" href="/assets/css/root.css" />
+      <link rel="stylesheet" href="/assets/fonts/icomoon/style.css" />
+      <link rel="stylesheet" href="/assets/css/fonts.css" />
+      <link rel="stylesheet" href="/assets/css/slider.css" />
+      <link rel="stylesheet" href="/assets/css/main.css" />
+      <script src="/assets/js/libs.js"></script>
+      <script src="/assets/js/main.js"></script>
       <title>Авангард</title>
    </head>
    <body>
@@ -36,7 +36,7 @@
                               <a href="#feedback" data-anchor>Контакты</a>
                            </li>
                            <li>
-                              <a href="./vacancies/">Вакансии</a>
+                              <a href="/vacancies/">Вакансии</a>
                            </li>
                         </ul>
                      </nav>
@@ -85,8 +85,8 @@
                   </div>
                </div>
             </header>
-            <link rel="stylesheet" href="./assets/css/components/header.css" />
-         </div>
+            <link rel="stylesheet" href="/assets/css/components/header.css" />
+         </main>
          <section class="vacancies">
             <div class="container">
                <div class="vacancies__inner">
@@ -111,9 +111,9 @@
                         </div>
                         <div class="vacancies__card-button-name">
                            <a
-                              href="#feedback"
+                              href=""
                               class="vacancies__card-button button button--solid"
-                              data-anchor
+                              data-modal-open="vacancies"
                            >
                               СВЯЗАТЬСЯ
                            </a>
@@ -244,7 +244,59 @@
                </div>
             </div>
          </section>
-         <link rel="stylesheet" href="./assets/css/components/vacancies.css" />
+         <link rel="stylesheet" href="/assets/css/components/vacancies.css" />
+         <div class="vacancies__modal modal " data-modal="vacancies">
+            <div class="modal__container modal__container--white">
+               <div
+                  class="modal__container-close icon-close"
+                  data-modal-close
+               ></div>
+               <div class="vacancies__modal_container-inner modal__container-inner">
+                  <h2 class="vacancies__modal-title title">ОСТАВИТЬ ЗАВЯКУ</h2>
+                  <form method="post" class="form" data-form>
+                     <div class="form__col">
+                        <input
+                           class="input"
+                           type="text"
+                           name="name"
+                           placeholder="Введите Имя"
+                           id="name"
+                        />
+                        <input
+                           class="input"
+                           type="text"
+                           name="email"
+                           placeholder="Введите E-mail"
+                           id="email"
+                        />
+                        <input
+                           class="input"
+                           type="text"
+                           name="phone"
+                           placeholder="Введите Телефон"
+                           id="phone"
+                        />
+                        <div class="custom-file-input">
+                           <label for="fileInput">
+                               <img src="attachment-icon.png" alt="Attachment Icon">
+                               Прикрепите файл
+                           </label>
+                           <input type="file" id="fileInput" name="fileInput" accept="image/*" style="display: none;">
+                       </div>
+                     </div>
+                     <div class="form__col">
+                        <button
+                        type="submit"
+                        class="button button--solid"
+                        type="submit"
+                     >
+                        ОСТАВИТЬ ЗАВЯКУ
+                     </button>
+                     </div>
+                  </form>
+               </div>
+            </div>
+         </div>
          <footer class="footer">
             <div class="container container--grid">
                <div class="footer__col">
@@ -267,7 +319,7 @@
                            <a href="#news" data-anchor>Пресс-центр</a>
                         </li>
                         <li>
-                           <a href="./vacancies/">Вакансии</a>
+                           <a href="/vacancies/">Вакансии</a>
                         </li>
                      </ul>
                   </nav>
@@ -337,7 +389,7 @@
                </div>
             </div>
          </footer>
-         <link rel="stylesheet" href="./assets/css/components/footer.css" />
+         <link rel="stylesheet" href="/assets/css/components/footer.css" />
       </div>
    </body>
 </html>

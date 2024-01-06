@@ -22,7 +22,15 @@
 }
 
 .feedback__form{
-    max-width: 628px;
+    max-width: 628px; 
+}
+
+.feedback__form_row{
+    flex-wrap: wrap;
+}
+
+.feedback__form_row .form__footer-field{
+    width: 50%;
 }
 
 @media (max-width:900px){
