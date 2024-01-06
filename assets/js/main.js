@@ -15,6 +15,23 @@ $(document).ready(() => {
    });
 
    // Якорь
+   const href = localStorage.getItem("section");
+
+   function scrollTo(target) {
+      const targetElement = $(target);
+
+      if (targetElement.length) {
+         $("html, body").animate(
+            {
+               scrollTop: targetElement.offset().top
+            },
+            1000
+         );
+      } else {
+         localStorage.setItem("section", target);
+         location.replace("/");
+      }
+   }
 
    $("[data-anchor]").on("click", function (e) {
       e.preventDefault();
@@ -27,13 +44,13 @@ $(document).ready(() => {
          $("[data-burger]").click();
       }
 
-      $("html, body").animate(
-         {
-            scrollTop: $(targetSection).offset().top
-         },
-         1000
-      );
+      scrollTo(targetSection);
    });
+
+   if (href) {
+      scrollTo(href);
+      localStorage.removeItem("section");
+   }
 
    // Бургер
    $("[data-burger]").on("click", function () {
@@ -43,66 +60,11 @@ $(document).ready(() => {
       $("body").css("overflow", $(this).hasClass("active") ? "hidden" : "");
    });
 
-   // Форма и инпуты
-   $("input").on("keyup", function () {
-      $(this).toggleClass("validate", $(this).val().trim().length > 0);
-   });
 
-   $("input").focus(function () {
-      $(this).removeClass("error");
-   });
-
-   $("[data-form]").on("submit", function (e) {
-      e.preventDefault();
-
-      const $inputs = $(this).find(".input");
-      const $name = $("#name");
-      const $mail = $("#email");
-      let isValid = true;
-      const emailPattern =
-         /^[-a-z0-9!#$%&'*+/=?^_`{|}~]+(?:\.[-a-z0-9!#$%&'*+/=?^_`{|}~]+)*@(?:[a-z0-9]([-a-z0-9]{0,61}[a-z0-9])?\.)*(?:aero|arpa|asia|biz|cat|com|coop|edu|gov|info|int|jobs|mil|mobi|museum|name|net|org|pro|tel|travel|[a-z][a-z])$/;
-
-      // Валидация на пустую строку
-      if ($name.val().trim() === "" || $mail.val().trim() === "") {
-         $inputs.addClass("error");
-         isValid = false;
-      }
-
-      if (!emailPattern.test($mail.val().trim())) {
-         $mail.addClass("error");
-         isValid = false;
-      }
-
-      if (isValid) {
-         
-         // собираем данные с формы
-         let user_name = $name.val();
-         let user_email = $mail.val();
-         // отправляем данные
-         $.ajax({
-            url: "contact.php",
-            type: "post",
-            data: {
-               name: user_name,
-               email: user_email
-            },
-            error: function () {
-               console.log('error')
-            },
-            success: function (result) {
-               /* В случае удачной обработки и отправки выполнится следующий код*/
-               $inputs.removeClass("error validate").val("");
-               $('[data-modal]').addClass('open')
-               $("body").css("overflow", "hidden");
-            }
-         });
-      }
-   });
-
-   $('[data-modal-close]').on('click', function() {
-      $(this).closest('.modal').removeClass('open')
+   $("[data-modal-close]").on("click", function () {
+      $(this).closest(".modal").removeClass("open");
       $("body").css("overflow", "");
-   })
+   });
 
    // Слайдер
    $("[data-slider-container]").each(function () {
@@ -141,12 +103,13 @@ $(document).ready(() => {
             }
          };
 
-         if($parent.find('.swiper-slide').length <= 2 && $(window).width() >= 900){
-            $parent.find('.slider-arrows').remove()
+         if (
+            $parent.find(".swiper-slide").length <= 2 &&
+            $(window).width() >= 900
+         ) {
+            $parent.find(".slider-arrows").remove();
          }
       }
-
-      
 
       const slider = new Swiper($slider, settings);
       slider.init();

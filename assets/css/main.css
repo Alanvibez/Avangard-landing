@@ -6,6 +6,10 @@
    padding: 0;
 }
 
+body{
+   font-family: var(--montserrat);
+}
+
 li {
    list-style: none;
 }
@@ -213,6 +217,13 @@ input::placeholder {
 
 .form__row {
    display: flex;
+}
+
+.form__col{
+   display: flex;
+   flex-direction: column;
+   gap: 10px;
+   margin-bottom: 10px;
 }
 
 .form__footer-button {
