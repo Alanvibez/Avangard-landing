@@ -1,9 +1,13 @@
 .header{
     height: 120px;
-    background: rgba(11, 16, 16, 0.36);
-    backdrop-filter: blur(7.5px);
+    background: #0E1414;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     z-index: 1;
+}
+
+.main .header {
+    background: rgba(11, 16, 16, 0.36);
+    backdrop-filter: blur(7.5px);
 }
 
 .header__inner{

@@ -23,6 +23,10 @@
   height: 100%;
 }
 
+.slider-arrows--border .slider-arrow{
+  border: .5px solid #E2E2E2;
+}
+
 .slider-arrow {
   flex: 1;
   display: flex;

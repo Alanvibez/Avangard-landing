@@ -14,11 +14,43 @@
    </head>
    <body>
       <div class="wrapper">
-         <main class="main">
-            <header class="header">
-               <div class="container container--border">
-                  <div class="header__inner">
-                     <nav class="header__nav">
+         <header class="header">
+            <div class="container">
+               <div class="header__inner">
+                  <nav class="header__nav">
+                     <ul class="nav__list">
+                        <li>
+                           <a href="#about" data-anchor>О компании</a>
+                        </li>
+                        <li>
+                           <a href="/product/">Продукция</a>
+                        </li>
+                        <li>
+                           <a href="#production" data-anchor>Производство</a>
+                        </li>
+                        <li>
+                           <a href="#news" data-anchor>Пресс-центр</a>
+                        </li>
+                        <li>
+                           <a href="/contacts/">Контакты</a>
+                        </li>
+                        <li>
+                           <a href="/vacancies/">Вакансии</a>
+                        </li>
+                     </ul>
+                  </nav>
+                  <div class="header__button">
+                     <a href="#feedback" class="button" data-anchor>Оставить заявку</a>
+                  </div>
+                  <div class="haeder__burger">
+                     <div class="burger" data-burger></div>
+                  </div>
+               </div>
+            </div>
+            <div class="header__menu">
+               <div class="container">
+                  <div class="header__menu-inner">
+                     <div class="header__menu-nav">
                         <ul class="nav__list">
                            <li>
                               <a href="#about" data-anchor>О компании</a>
@@ -39,181 +71,85 @@
                               <a href="/vacancies/">Вакансии</a>
                            </li>
                         </ul>
-                     </nav>
-                     <div class="header__button">
-                        <a href="#feedback" class="button" data-anchor
-                           >Оставить заявку</a
-                        >
                      </div>
-                     <div class="haeder__burger">
-                        <div class="burger" data-burger></div>
+                     <div class="header__menu-phone">
+                        <a href="tel:+79173901759">+7 (917) 390 17 59</a>
+                        <a href="tel:+78432042451"> +7 (843) 204 24 51 </a>
                      </div>
                   </div>
                </div>
-               <div class="header__menu">
-                  <div class="container">
-                     <div class="header__menu-inner">
-                        <div class="header__menu-nav">
-                           <ul class="nav__list">
-                              <li>
-                                 <a href="#about" data-anchor>О компании</a>
-                              </li>
-                              <li>
-                                 <a href="#product" data-anchor>Продукция</a>
-                              </li>
-                              <li>
-                                 <a href="#production" data-anchor
-                                    >Производство</a
-                                 >
-                              </li>
-                              <li>
-                                 <a href="#news" data-anchor>Пресс-центр</a>
-                              </li>
-                              <li>
-                                 <a href="#feedback" data-anchor>Контакты</a>
-                              </li>
-                              <li>
-                                 <a href="/vacancies/">Вакансии</a>
-                              </li>
-                           </ul>
-                        </div>
-                        <div class="header__menu-phone">
-                           <a href="tel:+79173901759">+7 (917) 390 17 59</a>
-                           <a href="tel:+78432042451"> +7 (843) 204 24 51 </a>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </header>
-            <link rel="stylesheet" href="/assets/css/components/header.css" />
-         </main>
+            </div>
+         </header>
+         <link rel="stylesheet" href="/assets/css/components/header.css" />
+
          <section class="contacts">
             <div class="container">
                <h1 class="contacts__title title">ВАШ РЕГИОН</h1>
                <div class="contacts__content">
                   <div class="contacts__content-left">
-                     <div class="contacts__select">
-                        <button
-                           class="contacts__select-button"
-                           data-select-city
-                        >
-                           Казань
-                        </button>
-                        <div class="contacts__select-container">
-                           <button
-                              class="select_button"
-                              data-city="Санкт-Петербург"
-                           >
-                              Санкт-Петербург
-                           </button>
-                           <button class="select_button" data-city="Москва">
-                              Москва
-                           </button>
-                           <button
-                              class="select_button"
-                              data-city="Екатеринбург"
-                           >
-                              Екатеринбург
-                           </button>
-                           <button class="select_button" data-city="Чебоксары">
-                              Чебоксары
-                           </button>
-                           <button
-                              class="select_button"
-                              data-city="Ростов на Дону"
-                           >
-                              Ростов на Дону
-                           </button>
-                           <button
-                              class="select_button"
-                              data-city="Новосибирск"
-                           >
-                              Новосибирск
-                           </button>
-                           <button class="select_button" data-city="Омск">
-                              Омск
-                           </button>
-                           <button class="select_button" data-city="Минск">
-                              Минск
-                           </button>
+                     <div class="contacts__city">
+                        <div class="contacts__city-select" data-select-city>Казань</div>
+                        <div class="contacts__city-container">
+                           <div class="city__button" data-city="stpetersburg">Санкт-Петербург</div>
+                           <div class="city__button" data-city="moscow">Москва</div>
+                           <div class="city__button" data-city="ekaterenburg">Екатеринбург</div>
+                           <div class="city__button" data-city="cheboksary">Чебоксары</div>
+                           <div class="city__button" data-city="rostov">Ростов на Дону</div>
+                           <div class="city__button" data-city="novosibirsk">Новосибирск</div>
+                           <div class="city__button" data-city="omsk">Омск</div>
+                           <div class="city__button" data-city="minsk">Минск</div>
+                           <div class="city__button" data-city="kazan">Казань</div>
                         </div>
                      </div>
                      <div class="contacts__info">
                         <div class="contacts__info-item">
                            <div class="contacts__info-title">Адрес</div>
-                           <div class="contacts__info-contact" data-adress>
-                              ТЭЦЕВСКАЯ 295
-                           </div>
+                           <div class="contacts__info-contact" data-address>ТЭЦЕВСКАЯ 295</div>
                         </div>
                         <div class="contacts__info-item">
                            <div class="contacts__info-title">Телефон</div>
-                           <a
-                              href="tel:+89173901759"
-                              class="contacts__info-contact"
-                              >+8 917 390 17 59</a
-                           >
-                           <a
-                              href="tel:+88432042451"
-                              class="contacts__info-contact"
-                              >+8 843 204 24 51</a
-                           >
-                           <a
-                              href="tel:+88432042451"
-                              class="contacts__info-contact"
-                              >+8 843 204 24 51</a
-                           >
-                           <a
-                              href="tel:+88432042451"
-                              class="contacts__info-contact"
-                              >+8 843 204 24 51</a
-                           >
+                           <div data-phone>
+                              <a href="tel:+89173901759" class="contacts__info-contact">+8 917 390 17 59</a>
+                              <a href="tel:+88432042451" class="contacts__info-contact">+8 843 204 24 51</a>
+                              <a href="tel:+88432042451" class="contacts__info-contact">+8 843 204 24 51</a>
+                              <a href="tel:+88432042451" class="contacts__info-contact">+8 843 204 24 51</a>
+                           </div>
                         </div>
                         <div class="contacts__info-item">
                            <div class="contacts__info-title">E-mail</div>
-                           <a
-                              href="mailto:lkm-trade@yandex.ru"
-                              class="contacts__info-contact"
-                              >lkm-trade@yandex.ru</a
-                           >
+                           <div data-mail>
+                              <a href="mailto:lkm-trade@yandex.ru" class="contacts__info-contact">lkm-trade@yandex.ru</a>
+                           </div>
                         </div>
                         <div class="contacts__info-item">
                            <div class="contacts__info-title">График работы</div>
-                           <p class="contacts__info-contact">
-                              Понедельник-пятница: 09:00 - 18:00
-                           </p>
-                           <p class="contacts__info-contact">
-                              Суббота: 10:00 - 16:00
-                           </p>
-                           <p class="contacts__info-contact">
-                              Воскресенье: 11:00 - 16:00
-                           </p>
+                           <div data-work>
+                              <p class="contacts__info-contact">Понедельник-пятница: 09:00 - 18:00</p>
+                              <p class="contacts__info-contact">Суббота: 10:00 - 16:00</p>
+                              <p class="contacts__info-contact">Воскресенье: 11:00 - 16:00</p>
+                           </div>
                         </div>
                         <div class="contacts__info-item">
-                           <div class="contacts__info-title">
-                              График работы склада
+                           <div class="contacts__info-title">График работы склада</div>
+                           <div data-sklad>
+                              <p class="contacts__info-contact">Понедельник-пятница: 09:00 - 17:30</p>
+                              <p class="contacts__info-contact">Суббота: выходной</p>
+                              <p class="contacts__info-contact">Воскресенье: выходной</p>
                            </div>
-                           <p class="contacts__info-contact">
-                              Понедельник-пятница: 09:00 - 17:30
-                           </p>
-                           <p class="contacts__info-contact">
-                              Суббота: выходной
-                           </p>
-                           <p class="contacts__info-contact">
-                              Воскресенье: выходной
-                           </p>
                         </div>
                      </div>
                   </div>
                   <div class="contacts__content-right">
-                     <h3 class="contacts__info__h3">карта проезда</h3>
-                     <div class="contacts__info__map">
+                     <h3 class="contacts__map-title">карта проезда</h3>
+                     <div class="contacts__map-container">
                         <iframe
                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2239.1376416533367!2d48.99783935121607!3d55.86027829107015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x415953556f81073b%3A0x5930427efe862bea!2z0YPQuy4g0KLRjdGG0LXQstGB0LrQsNGPLCAyOTUsINCa0LDQt9Cw0L3RjCwg0KDQtdGB0L8uINCi0LDRgtCw0YDRgdGC0LDQvSwg0KDQvtGB0YHQuNGPLCA0MjAwNTE!5e0!3m2!1sru!2sby!4v1646399872943!5m2!1sru!2sby"
                            width="100%"
-                           height="100%"
+                           height="500px"
                            style="border: 0"
                            allowfullscreen=""
                            loading="lazy"
+                           data-map
                         ></iframe>
                      </div>
                   </div>
@@ -268,16 +204,11 @@
                         </div>
                      </li>
 
-                     <li class="footer__info-item">
-                        Email:<a href="mailto:lkm-trade@yandex.ru"
-                           >lkm-trade@yandex.ru</a
-                        >
-                     </li>
+                     <li class="footer__info-item">Email:<a href="mailto:lkm-trade@yandex.ru">lkm-trade@yandex.ru</a></li>
                      <li class="footer__info-item">
                         Адрес: Республика Татарстан, Казань, <br />
                         Офис: Улица Достоевского, 52 <br />
-                        Производство: Улица Тэцевская 295 Производство\Склад:
-                        Улица. 3я Кленовая, 9
+                        Производство: Улица Тэцевская 295 Производство\Склад: Улица. 3я Кленовая, 9
                      </li>
 
                      <div class="show-md">
@@ -288,13 +219,7 @@
                   </ul>
                   <div class="footer__dev">
                      <a href="https://saftech.net/" target="_blank">
-                        <svg
-                           width="45"
-                           height="42"
-                           viewBox="0 0 45 42"
-                           fill="none"
-                           xmlns="http://www.w3.org/2000/svg"
-                        >
+                        <svg width="45" height="42" viewBox="0 0 45 42" fill="none" xmlns="http://www.w3.org/2000/svg">
                            <path
                               d="M26.1375 11.0022L23.2213 0.0820658C23.1962 -0.0117692 23.0566 -0.0301902 23.0026 0.0532092L4.04729 29.3192C3.97834 29.4256 4.13122 29.5353 4.23141 29.4512L26.1029 11.1054C26.1343 11.0791 26.1475 11.0397 26.1375 11.0022Z"
                               fill="#394E4E"

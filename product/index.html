@@ -14,11 +14,43 @@
    </head>
    <body>
       <div class="wrapper">
-         <main class="main">
-            <header class="header">
-               <div class="container container--border">
-                  <div class="header__inner">
-                     <nav class="header__nav">
+         <header class="header">
+            <div class="container">
+               <div class="header__inner">
+                  <nav class="header__nav">
+                     <ul class="nav__list">
+                        <li>
+                           <a href="#about" data-anchor>О компании</a>
+                        </li>
+                        <li>
+                           <a href="/product/">Продукция</a>
+                        </li>
+                        <li>
+                           <a href="#production" data-anchor>Производство</a>
+                        </li>
+                        <li>
+                           <a href="#news" data-anchor>Пресс-центр</a>
+                        </li>
+                        <li>
+                           <a href="/contacts/">Контакты</a>
+                        </li>
+                        <li>
+                           <a href="/vacancies/">Вакансии</a>
+                        </li>
+                     </ul>
+                  </nav>
+                  <div class="header__button">
+                     <a href="#feedback" class="button" data-anchor>Оставить заявку</a>
+                  </div>
+                  <div class="haeder__burger">
+                     <div class="burger" data-burger></div>
+                  </div>
+               </div>
+            </div>
+            <div class="header__menu">
+               <div class="container">
+                  <div class="header__menu-inner">
+                     <div class="header__menu-nav">
                         <ul class="nav__list">
                            <li>
                               <a href="#about" data-anchor>О компании</a>
@@ -39,277 +71,284 @@
                               <a href="/vacancies/">Вакансии</a>
                            </li>
                         </ul>
-                     </nav>
-                     <div class="header__button">
-                        <a href="#feedback" class="button" data-anchor
-                           >Оставить заявку</a
-                        >
                      </div>
-                     <div class="haeder__burger">
-                        <div class="burger" data-burger></div>
+                     <div class="header__menu-phone">
+                        <a href="tel:+79173901759">+7 (917) 390 17 59</a>
+                        <a href="tel:+78432042451"> +7 (843) 204 24 51 </a>
                      </div>
                   </div>
                </div>
-               <div class="header__menu">
-                  <div class="container">
-                     <div class="header__menu-inner">
-                        <div class="header__menu-nav">
-                           <ul class="nav__list">
-                              <li>
-                                 <a href="#about" data-anchor>О компании</a>
-                              </li>
-                              <li>
-                                 <a href="#product" data-anchor>Продукция</a>
-                              </li>
-                              <li>
-                                 <a href="#production" data-anchor
-                                    >Производство</a
-                                 >
-                              </li>
-                              <li>
-                                 <a href="#news" data-anchor>Пресс-центр</a>
-                              </li>
-                              <li>
-                                 <a href="#feedback" data-anchor>Контакты</a>
-                              </li>
-                              <li>
-                                 <a href="/vacancies/">Вакансии</a>
-                              </li>
-                           </ul>
-                        </div>
-                        <div class="header__menu-phone">
-                           <a href="tel:+79173901759">+7 (917) 390 17 59</a>
-                           <a href="tel:+78432042451"> +7 (843) 204 24 51 </a>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </header>
-            <link rel="stylesheet" href="/assets/css/components/header.css" />
-         </main>
+            </div>
+         </header>
+         <link rel="stylesheet" href="/assets/css/components/header.css" />
+
          <section class="product" id="product">
             <div class="container">
                <div class="product__title title">Продукция</div>
                <div class="product__desk" data-tabs-container data-slider-container>
-                <div class="slider-arrows product-arrows" style="height: 200px;">
-                    <div class="slider-arrow" data-slider-arrow="left">
-                       <i class="icon-arrow-left"></i>
-                    </div>
-                    <div class="slider-arrow" data-slider-arrow="right">
-                       <i class="icon-arrow-right"></i>
-                    </div>
-                 </div>
-                  <div class="product__tabs" >
-                    <div class="swiper" data-slider="vacancies">
+                  <div class="slider-arrows slider-arrows--border product-arrows">
+                     <div class="slider-arrow" data-slider-arrow="left">
+                        <i class="icon-arrow-left"></i>
+                     </div>
+                     <div class="slider-arrow" data-slider-arrow="right">
+                        <i class="icon-arrow-right"></i>
+                     </div>
+                  </div>
+                  <div class="product__tabs">
+                     <div class="swiper" data-slider="vacancies">
                         <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <div class="product__tab active" data-tab>
-                                    <div class="product__tab-title">Краски</div>
-                                    <i class="product__tab-icon icon-crask"> </i>
-                                 </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="product__tab" data-tab>
-                                    <div class="product__tab-title">Эмали</div>
-                                    <i class="product__tab-icon icon-emal"> </i>
-                                 </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="product__tab" data-tab>
-                                    <div class="product__tab-title">Лаки</div>
-                                    <i class="product__tab-icon icon-lac"> </i>
-                                 </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="product__tab" data-tab>
-                                    <div class="product__tab-title">Грунтовки</div>
-                                    <i class="product__tab-icon icon-grunt"> </i>
-                                 </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="product__tab" data-tab>
-                                    <div class="product__tab-title">Растворители</div>
-                                    <i class="product__tab-icon icon-rastvor"> </i>
-                                 </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="product__tab" data-tab>
-                                    <div class="product__tab-title">Дорожно-разметочная краска</div>
-                                    <i class="product__tab-icon icon-emal"> </i>
-                                 </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="product__tab" data-tab>
-                                    <div class="product__tab-title">Органосиликатные композиции ОС</div>
-                                    <i class="product__tab-icon icon-lac"> </i>
-                                 </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="product__tab" data-tab>
-                                    <div class="product__tab-title">Колировочные пасты</div>
-                                    <i class="product__tab-icon icon-grunt"> </i>
-                                 </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="product__tab" data-tab>
-                                    <div class="product__tab-title">Мастика</div>
-                                    <i class="product__tab-icon icon-rastvor"> </i>
-                                 </div>
-                            </div>
+                           <div class="swiper-slide">
+                              <div class="product__tab active" data-tab>
+                                 <div class="product__tab-title">Краски</div>
+                                 <i class="product__tab-icon icon-crask"> </i>
+                              </div>
+                           </div>
+                           <div class="swiper-slide">
+                              <div class="product__tab" data-tab>
+                                 <div class="product__tab-title">Эмали</div>
+                                 <i class="product__tab-icon icon-emal"> </i>
+                              </div>
+                           </div>
+                           <div class="swiper-slide">
+                              <div class="product__tab" data-tab>
+                                 <div class="product__tab-title">Лаки</div>
+                                 <i class="product__tab-icon icon-lac"> </i>
+                              </div>
+                           </div>
+                           <div class="swiper-slide">
+                              <div class="product__tab" data-tab>
+                                 <div class="product__tab-title">Грунтовки</div>
+                                 <i class="product__tab-icon icon-grunt"> </i>
+                              </div>
+                           </div>
+                           <div class="swiper-slide">
+                              <div class="product__tab" data-tab>
+                                 <div class="product__tab-title">Растворители</div>
+                                 <i class="product__tab-icon icon-rastvor"> </i>
+                              </div>
+                           </div>
+                           <div class="swiper-slide">
+                              <div class="product__tab" data-tab>
+                                 <div class="product__tab-title">Грунт-Эмаль</div>
+                                 <i class="product__tab-icon icon-gruntemal"> </i>
+                              </div>
+                           </div>
+                           <div class="swiper-slide">
+                              <div class="product__tab" data-tab>
+                                 <div class="product__tab-title">Дорожно-разметочная краска</div>
+                                 <i class="product__tab-icon icon-road"> </i>
+                              </div>
+                           </div>
+                           <div class="swiper-slide">
+                              <div class="product__tab" data-tab>
+                                 <div class="product__tab-title">Органосиликатные композиции ОС</div>
+                                 <i class="product__tab-icon icon-compos"> </i>
+                              </div>
+                           </div>
+                           <div class="swiper-slide">
+                              <div class="product__tab" data-tab>
+                                 <div class="product__tab-title">Колировочные пасты</div>
+                                 <i class="product__tab-icon icon-grunt"> </i>
+                              </div>
+                           </div>
+                           <div class="swiper-slide">
+                              <div class="product__tab" data-tab>
+                                 <div class="product__tab-title">Мастика</div>
+                                 <i class="product__tab-icon icon-rastvor"> </i>
+                              </div>
+                           </div>
                         </div>
-                    </div>
+                     </div>
                   </div>
                   <div class="product__block" data-tab-content>
                      <div class="product__info">
                         <div class="product__info-title">Краски</div>
                         <p class="product__info-text">
-                           Это суспензии пигментов или их смеси с наполнителями
-                           в пленкообразующем веществе (например масле, олифе,
-                           эмульсии, казеине, латексе), которые после высыхания
-                           образуют непрозрачную окрашенную однородную пленку.
+                           Это суспензии пигментов или их смеси с наполнителями в пленкообразующем веществе (например
+                           масле, олифе, эмульсии, казеине, латексе), которые после высыхания образуют непрозрачную
+                           окрашенную однородную пленку.
                            <br /><br />
-                           Масляные краски выпускаются готовыми к употреблению и
-                           густотертыми, которые перед применением разбавляются
-                           олифой..
+                           Масляные краски выпускаются готовыми к употреблению и густотертыми, которые перед применением
+                           разбавляются олифой..
                         </p>
                         <div class="product__info-button">
-                           <a
-                              href="#feedback"
-                              data-anchor
-                              class="button button--solid"
-                           >
-                              Оставить заявку
-                           </a>
+                           <a href="#feedback" data-anchor class="button button--solid"> Оставить заявку </a>
                         </div>
                      </div>
                      <div class="product__images">
-                        <img src="/assets/images/product-img.webp" alt="" />
+                        <img src="/assets/images/product/kraski.png" alt="" load='lazy' />
                      </div>
                   </div>
-                  <div
-                     class="product__block"
-                     style="display: none"
-                     data-tab-content
-                  >
+                  <div class="product__block" style="display: none" data-tab-content>
                      <div class="product__info">
                         <div class="product__info-title">Эмали</div>
                         <p class="product__info-text">
-                           Это суспензии пигментов или их смесей с наполнителями
-                           в синтетических смолах или других высокомолекулярных
-                           соединениях, растворенных в органическом
-                           растворителе, образующие после высыхания непрозрачную
-                           твердую пленку с различной фактурой.
+                           Это суспензии пигментов или их смесей с наполнителями в синтетических смолах или других
+                           высокомолекулярных соединениях, растворенных в органическом растворителе, образующие после
+                           высыхания непрозрачную твердую пленку с различной фактурой.
                            <br /><br />
-                           В зависимости от типа пленкообразователя выпускают
-                           алкидные (глифталевые и пентафталевые) эмали,
-                           нитроцеллюлозные, кремнийорганические, карбамидно- и
-                           меламиноформальдегидные и другие эмали.
+                           В зависимости от типа пленкообразователя выпускают алкидные (глифталевые и пентафталевые)
+                           эмали, нитроцеллюлозные, кремнийорганические, карбамидно- и меламиноформальдегидные и другие
+                           эмали.
                         </p>
                         <div class="product__info-button">
-                           <a
-                              href="#feedback"
-                              data-anchor
-                              class="button button--solid"
-                           >
-                              Оставить заявку
-                           </a>
+                           <a href="#feedback" data-anchor class="button button--solid"> Оставить заявку </a>
                         </div>
                      </div>
                      <div class="product__images">
-                        <img src="/assets/images/product-img.webp" alt="" />
+                        <img src="/assets/images/product/emal.png" alt="" load='lazy' />
                      </div>
                   </div>
-                  <div
-                     class="product__block"
-                     style="display: none"
-                     data-tab-content
-                  >
+                  <div class="product__block" style="display: none" data-tab-content>
                      <div class="product__info">
                         <div class="product__info-title">Лак</div>
                         <p class="product__info-text">
-                           Раствор пленкообразующих веществ в органических
-                           растворителях или в воде, образующий после высыхания
-                           твердую, прозрачную однородную пленку.
+                           Раствор пленкообразующих веществ в органических растворителях или в воде, образующий после
+                           высыхания твердую, прозрачную однородную пленку.
                            <br /><br />
-                           Они улучшают внешний вид и продлевают срок службы
-                           поверхностей, защищая их от коррозии, истирания,
-                           трещин и воздействия внешних факторов, таких как
-                           ультрафиолетовое излучение и вода.
+                           Они улучшают внешний вид и продлевают срок службы поверхностей, защищая их от коррозии,
+                           истирания, трещин и воздействия внешних факторов, таких как ультрафиолетовое излучение и
+                           вода.
                         </p>
                         <div class="product__info-button">
-                           <a
-                              href="#feedback"
-                              data-anchor
-                              class="button button--solid"
-                           >
-                              Оставить заявку
-                           </a>
+                           <a href="#feedback" data-anchor class="button button--solid"> Оставить заявку </a>
                         </div>
                      </div>
                      <div class="product__images">
-                        <img src="/assets/images/product-img.webp" alt="" />
+                        <img src="/assets/images/product/lak.png" alt="" load='lazy' />
                      </div>
                   </div>
-                  <div
-                     class="product__block"
-                     style="display: none"
-                     data-tab-content
-                  >
+                  <div class="product__block" style="display: none" data-tab-content>
                      <div class="product__info">
                         <div class="product__info-title">Грунтовки</div>
                         <p class="product__info-text">
-                           Грунтовки - это суспензии пигментов, которые
-                           добавляются в пленкообразующее вещество для создания
-                           однородной защитной пленки на окрашиваемой
-                           поверхности (например, металлической или деревянной).
+                           Грунтовки - это суспензии пигментов, которые добавляются в пленкообразующее вещество для
+                           создания однородной защитной пленки на окрашиваемой поверхности (например, металлической или
+                           деревянной).
                            <br /><br />
-                           Пленка надежно защищает поверхность от коррозии или
-                           гниения, а также обеспечивает хорошее сцепление с
-                           поверхностями, на которые наносится материал поверх
-                           грунтовки (например, древесина или штукатурка) и
-                           создаёт водо- и воздухонепроницаемое покрытие.
+                           Пленка надежно защищает поверхность от коррозии или гниения, а также обеспечивает хорошее
+                           сцепление с поверхностями, на которые наносится материал поверх грунтовки (например,
+                           древесина или штукатурка) и создаёт водо- и воздухонепроницаемое покрытие.
                         </p>
                         <div class="product__info-button">
-                           <a
-                              href="#feedback"
-                              data-anchor
-                              class="button button--solid"
-                           >
-                              Оставить заявку
-                           </a>
+                           <a href="#feedback" data-anchor class="button button--solid"> Оставить заявку </a>
                         </div>
                      </div>
                      <div class="product__images">
-                        <img src="/assets/images/product-img.webp" alt="" />
+                        <img src="/assets/images/product/grunt.png" alt="" load='lazy' />
                      </div>
                   </div>
-                  <div
-                     class="product__block"
-                     style="display: none"
-                     data-tab-content
-                  >
+                  <div class="product__block" style="display: none" data-tab-content>
                      <div class="product__info">
                         <div class="product__info-title">Растворители</div>
                         <p class="product__info-text">
-                           Растворители это органические и неорганические
-                           летучие составы, позволяющие растворять различные
-                           вещества.
+                           Растворители это органические и неорганические летучие составы, позволяющие растворять
+                           различные вещества.
                            <br /><br />
-                           Также они используются для получения необходимой
-                           консистенции и улучшения характеристик материалов.
+                           Также они используются для получения необходимой консистенции и улучшения характеристик
+                           материалов.
                         </p>
                         <div class="product__info-button">
-                           <a
-                              href="#feedback"
-                              data-anchor
-                              class="button button--solid"
-                           >
-                              Оставить заявку
-                           </a>
+                           <a href="#feedback" data-anchor class="button button--solid"> Оставить заявку </a>
                         </div>
                      </div>
                      <div class="product__images">
-                        <img src="/assets/images/product-img.webp" alt="" />
+                        <img src="/assets/images/product/rastv.png" alt="" load='lazy' />
+                     </div>
+                  </div>
+                  <div class="product__block" style="display: none" data-tab-content>
+                     <div class="product__info">
+                        <div class="product__info-title">Грунт-Эмаль</div>
+                        <p class="product__info-text">
+                           Представляет собой суспензию антикоррозионных пигментов и наполнителей в растворе
+                           модифицированного алкидного лака с добавлением органических растворителей и целевых добавок.
+                           <br /><br />
+                           Для одновременного преобразования ржавчины, антикоррозионного грунтования и финишной окраски
+                           чистых и прокорродировавших металлических поверхностей с толщиной прочно связанной с металлом
+                           ржавчины до 60 мкм.
+                        </p>
+                        <div class="product__info-button">
+                           <a href="#feedback" data-anchor class="button button--solid"> Оставить заявку </a>
+                        </div>
+                     </div>
+                     <div class="product__images">
+                        <img src="/assets/images/product/gruntemal.png" alt="" load='lazy' />
+                     </div>
+                  </div>
+                  <div class="product__block" style="display: none" data-tab-content>
+                     <div class="product__info">
+                        <div class="product__info-title">Дорожно-разметочная краска</div>
+                        <p class="product__info-text">
+                           Дорожная разметочная краска используется для разметки автомобильных и самолетных полос,
+                           шоссе, трасс, стоянок, парковок и остановок общественного и личного транспорта. Она также
+                           может быть использована как бордюрная краска для создания ярких линий разметки, соблюдения
+                           правил дорожного движения.
+                           <br /><br />
+                           Специальный состав краски позволяет ее использование в зимний и весенне-осенний период при
+                           сухой погоде. Правильно нанесенная разметка будет держаться целый год и дольше, в зависимости
+                           от интенсивности использования дороги.
+                        </p>
+                        <div class="product__info-button">
+                           <a href="#feedback" data-anchor class="button button--solid"> Оставить заявку </a>
+                        </div>
+                     </div>
+                     <div class="product__images">
+                        <img src="/assets/images/product/roadkraska.png" alt="" load='lazy' />
+                     </div>
+                  </div>
+                  <div class="product__block" style="display: none" data-tab-content>
+                     <div class="product__info">
+                        <div class="product__info-title">Органосиликатные композиции ОС</div>
+                        <p class="product__info-text">
+                           Суспензии мелкодисперсных слоистых гидросиликатов, пигментов и функциональных добавок в
+                           растворах полиорганосилоксанов (в кремнийорганических лаках).
+                           <br /><br />
+                           Объединение органических и неорганических компонентов в составе придает органосиликатным
+                           композициям сверхпрочность, антикоррозийные, электро- и теплоизоляционные свойства.
+                        </p>
+                        <div class="product__info-button">
+                           <a href="#feedback" data-anchor class="button button--solid"> Оставить заявку </a>
+                        </div>
+                     </div>
+                     <div class="product__images">
+                        <img src="/assets/images/product/compos.png" alt="" load='lazy' />
+                     </div>
+                  </div>
+                  <div class="product__block" style="display: none" data-tab-content>
+                     <div class="product__info">
+                        <div class="product__info-title">Колировочные пасты</div>
+                        <p class="product__info-text">
+                           Колеровочная паста представляет собой состав насыщенного цвета, предназначенный для
+                           колерования масляных, алкидных, водно-дисперсионных, латексных и других видов красок.
+                           <br /><br />
+                           Чаще всего такие пасты наносятся на кирпичные, бетонные, зашпатлеванные и оштукатуренные
+                           поверхности. Используются также при оформлении фасадов и отделке интерьеров.
+                        </p>
+                        <div class="product__info-button">
+                           <a href="#feedback" data-anchor class="button button--solid"> Оставить заявку </a>
+                        </div>
+                     </div>
+                     <div class="product__images">
+                        <img src="/assets/images/product/pasta.png" alt="" load='lazy' />
+                     </div>
+                  </div>
+                  <div class="product__block" style="display: none" data-tab-content>
+                     <div class="product__info">
+                        <div class="product__info-title">Мастика</div>
+                        <p class="product__info-text">
+                           Жидкие гидроизоляционные материалы получаются путем смешивания нефтяного битума,
+                           наполнителей, модифицирующих добавок и органических растворителей для улучшения их качества.
+                           <br /><br />
+                           Затем полученная однородная вязкая масса наносится на горизонтальную поверхность шпателем или
+                           разравнивается специальными гребками при помощи налива. После отверждения мастика образует
+                           монолитный пластичный гидроизоляционный слой.
+                        </p>
+                        <div class="product__info-button">
+                           <a href="#feedback" data-anchor class="button button--solid"> Оставить заявку </a>
+                        </div>
+                     </div>
+                     <div class="product__images">
+                        <img src="/assets/images/product/mastika.png" alt="" load='lazy' />
                      </div>
                   </div>
                </div>
@@ -323,31 +362,19 @@
                                  <i class="product__info-icon icon-crask"></i>
                                  <div class="product__info-title">Краски</div>
                                  <p class="product__info-text">
-                                    Это суспензии пигментов или их смеси с
-                                    наполнителями в пленкообразующем веществе
-                                    (например масле, олифе, эмульсии, казеине,
-                                    латексе), которые после высыхания образуют
-                                    непрозрачную окрашенную однородную пленку.
+                                    Это суспензии пигментов или их смеси с наполнителями в пленкообразующем веществе
+                                    (например масле, олифе, эмульсии, казеине, латексе), которые после высыхания
+                                    образуют непрозрачную окрашенную однородную пленку.
                                     <br /><br />
-                                    Масляные краски выпускаются готовыми к
-                                    употреблению и густотертыми, которые перед
+                                    Масляные краски выпускаются готовыми к употреблению и густотертыми, которые перед
                                     применением разбавляются олифой..
                                  </p>
                                  <div class="product__info-button">
-                                    <a
-                                       href="#feedback"
-                                       data-anchor
-                                       class="button button--solid"
-                                    >
-                                       Оставить заявку
-                                    </a>
+                                    <a href="#feedback" data-anchor class="button button--solid"> Оставить заявку </a>
                                  </div>
                               </div>
                               <div class="product__images">
-                                 <img
-                                    src="/assets/images/gallery-1.webp"
-                                    alt=""
-                                 />
+                                 <img src="/assets/images/product/kraski.png" alt="" load='lazy' />
                               </div>
                            </div>
                         </div>
@@ -357,34 +384,20 @@
                                  <i class="product__info-icon icon-grunt"></i>
                                  <div class="product__info-title">Эмали</div>
                                  <p class="product__info-text">
-                                    Это суспензии пигментов или их смесей с
-                                    наполнителями в синтетических смолах или
-                                    других высокомолекулярных соединениях,
-                                    растворенных в органическом растворителе,
-                                    образующие после высыхания непрозрачную
-                                    твердую пленку с различной фактурой.
+                                    Это суспензии пигментов или их смесей с наполнителями в синтетических смолах или
+                                    других высокомолекулярных соединениях, растворенных в органическом растворителе,
+                                    образующие после высыхания непрозрачную твердую пленку с различной фактурой.
                                     <br /><br />
-                                    В зависимости от типа пленкообразователя
-                                    выпускают алкидные (глифталевые и
-                                    пентафталевые) эмали, нитроцеллюлозные,
-                                    кремнийорганические, карбамидно- и
+                                    В зависимости от типа пленкообразователя выпускают алкидные (глифталевые и
+                                    пентафталевые) эмали, нитроцеллюлозные, кремнийорганические, карбамидно- и
                                     меламиноформальдегидные и другие эмали.
                                  </p>
                                  <div class="product__info-button">
-                                    <a
-                                       href="#feedback"
-                                       data-anchor
-                                       class="button button--solid"
-                                    >
-                                       Оставить заявку
-                                    </a>
+                                    <a href="#feedback" data-anchor class="button button--solid"> Оставить заявку </a>
                                  </div>
                               </div>
                               <div class="product__images">
-                                 <img
-                                    src="/assets/images/gallery-1.webp"
-                                    alt=""
-                                 />
+                                 <img src="/assets/images/product/emal.png" alt="" load='lazy' />
                               </div>
                            </div>
                         </div>
@@ -394,32 +407,19 @@
                                  <i class="product__info-icon icon-lac"></i>
                                  <div class="product__info-title">Лак</div>
                                  <p class="product__info-text">
-                                    Раствор пленкообразующих веществ в
-                                    органических растворителях или в воде,
-                                    образующий после высыхания твердую,
-                                    прозрачную однородную пленку.
+                                    Раствор пленкообразующих веществ в органических растворителях или в воде, образующий
+                                    после высыхания твердую, прозрачную однородную пленку.
                                     <br /><br />
-                                    Они улучшают внешний вид и продлевают срок
-                                    службы поверхностей, защищая их от коррозии,
-                                    истирания, трещин и воздействия внешних
-                                    факторов, таких как ультрафиолетовое
-                                    излучение и вода.
+                                    Они улучшают внешний вид и продлевают срок службы поверхностей, защищая их от
+                                    коррозии, истирания, трещин и воздействия внешних факторов, таких как
+                                    ультрафиолетовое излучение и вода.
                                  </p>
                                  <div class="product__info-button">
-                                    <a
-                                       href="#feedback"
-                                       data-anchor
-                                       class="button button--solid"
-                                    >
-                                       Оставить заявку
-                                    </a>
+                                    <a href="#feedback" data-anchor class="button button--solid"> Оставить заявку </a>
                                  </div>
                               </div>
                               <div class="product__images">
-                                 <img
-                                    src="/assets/images/gallery-1.webp"
-                                    alt=""
-                                 />
+                                 <img src="/assets/images/product/lak.png" alt="" load='lazy' />
                               </div>
                            </div>
                         </div>
@@ -427,39 +427,137 @@
                            <div class="product__block">
                               <div class="product__info">
                                  <i class="product__info-icon icon-crask"></i>
-                                 <div class="product__info-title">
-                                    Грунтовки
-                                 </div>
+                                 <div class="product__info-title">Грунтовки</div>
                                  <p class="product__info-text">
-                                    Грунтовки - это суспензии пигментов, которые
-                                    добавляются в пленкообразующее вещество для
-                                    создания однородной защитной пленки на
-                                    окрашиваемой поверхности (например,
+                                    Грунтовки - это суспензии пигментов, которые добавляются в пленкообразующее вещество
+                                    для создания однородной защитной пленки на окрашиваемой поверхности (например,
                                     металлической или деревянной).
                                     <br /><br />
-                                    Пленка надежно защищает поверхность от
-                                    коррозии или гниения, а также обеспечивает
-                                    хорошее сцепление с поверхностями, на
-                                    которые наносится материал поверх грунтовки
-                                    (например, древесина или штукатурка) и
-                                    создаёт водо- и воздухонепроницаемое
+                                    Пленка надежно защищает поверхность от коррозии или гниения, а также обеспечивает
+                                    хорошее сцепление с поверхностями, на которые наносится материал поверх грунтовки
+                                    (например, древесина или штукатурка) и создаёт водо- и воздухонепроницаемое
                                     покрытие.
                                  </p>
                                  <div class="product__info-button">
-                                    <a
-                                       href="#feedback"
-                                       data-anchor
-                                       class="button button--solid"
-                                    >
-                                       Оставить заявку
-                                    </a>
+                                    <a href="#feedback" data-anchor class="button button--solid"> Оставить заявку </a>
                                  </div>
                               </div>
                               <div class="product__images">
-                                 <img
-                                    src="/assets/images/gallery-1.webp"
-                                    alt=""
-                                 />
+                                 <img src="/assets/images/product/grunt.png" alt="" load='lazy' />
+                              </div>
+                           </div>
+                        </div>
+                        <div class="swiper-slide">
+                           <div class="product__block">
+                              <div class="product__info">
+                                 <i class="product__info-icon icon-gruntemal"></i>
+                                 <div class="product__info-title">Грунт-Эмаль</div>
+                                 <p class="product__info-text">
+                                    Представляет собой суспензию антикоррозионных пигментов и наполнителей в растворе
+                                    модифицированного алкидного лака с добавлением органических растворителей и целевых добавок.
+                                    <br /><br />
+                                    Для одновременного преобразования ржавчины, антикоррозионного грунтования и финишной окраски
+                                    чистых и прокорродировавших металлических поверхностей с толщиной прочно связанной с металлом
+                                    ржавчины до 60 мкм.
+                                 </p>
+                                 <div class="product__info-button">
+                                    <a href="#feedback" data-anchor class="button button--solid"> Оставить заявку </a>
+                                 </div>
+                              </div>
+                              <div class="product__images">
+                                 <img src="/assets/images/product/gruntemal.png" alt="" load='lazy' />
+                              </div>
+                           </div>
+                        </div>
+                        <div class="swiper-slide">
+                           <div class="product__block">
+                              <div class="product__info">
+                                 <i class="product__info-icon icon-emal"></i>
+                                 <div class="product__info-title">Дорожно-разметочная краска</div>
+                                 <p class="product__info-text">
+                                    Дорожная разметочная краска используется для разметки автомобильных и самолетных
+                                    полос, шоссе, трасс, стоянок, парковок и остановок общественного и личного
+                                    транспорта. Она также может быть использована как бордюрная краска для создания
+                                    ярких линий разметки, соблюдения правил дорожного движения.
+                                    <br /><br />
+                                    Специальный состав краски позволяет ее использование в зимний и весенне-осенний
+                                    период при сухой погоде. Правильно нанесенная разметка будет держаться целый год и
+                                    дольше, в зависимости от интенсивности использования дороги.
+                                 </p>
+                                 <div class="product__info-button">
+                                    <a href="#feedback" data-anchor class="button button--solid"> Оставить заявку </a>
+                                 </div>
+                              </div>
+                              <div class="product__images">
+                                 <img src="/assets/images/product/roadkraska.png" alt="" load='lazy' />
+                              </div>
+                           </div>
+                        </div>
+                        <div class="swiper-slide">
+                           <div class="product__block">
+                              <div class="product__info">
+                                 <i class="product__info-icon icon-lac"></i>
+                                 <div class="product__info-title">Органосиликатные композиции ОС</div>
+                                 <p class="product__info-text">
+                                    Суспензии мелкодисперсных слоистых гидросиликатов, пигментов и функциональных
+                                    добавок в растворах полиорганосилоксанов (в кремнийорганических лаках).
+                                    <br /><br />
+                                    Объединение органических и неорганических компонентов в составе придает
+                                    органосиликатным композициям сверхпрочность, антикоррозийные, электро- и
+                                    теплоизоляционные свойства.
+                                 </p>
+                                 <div class="product__info-button">
+                                    <a href="#feedback" data-anchor class="button button--solid"> Оставить заявку </a>
+                                 </div>
+                              </div>
+                              <div class="product__images">
+                                 <img src="/assets/images/product/compos.png" alt="" load='lazy' />
+                              </div>
+                           </div>
+                        </div>
+                        <div class="swiper-slide">
+                           <div class="product__block">
+                              <div class="product__info">
+                                 <i class="product__info-icon icon-grunt"></i>
+                                 <div class="product__info-title">Колировочные пасты</div>
+                                 <p class="product__info-text">
+                                    Колеровочная паста представляет собой состав насыщенного цвета, предназначенный для
+                                    колерования масляных, алкидных, водно-дисперсионных, латексных и других видов
+                                    красок.
+                                    <br /><br />
+                                    Чаще всего такие пасты наносятся на кирпичные, бетонные, зашпатлеванные и
+                                    оштукатуренные поверхности. Используются также при оформлении фасадов и отделке
+                                    интерьеров.
+                                 </p>
+                                 <div class="product__info-button">
+                                    <a href="#feedback" data-anchor class="button button--solid"> Оставить заявку </a>
+                                 </div>
+                              </div>
+                              <div class="product__images">
+                                 <img src="/assets/images/product/pasta.png" alt="" load='lazy' />
+                              </div>
+                           </div>
+                        </div>
+                        <div class="swiper-slide">
+                           <div class="product__block">
+                              <div class="product__info">
+                                 <i class="product__info-icon icon-rastvor"></i>
+                                 <div class="product__info-title">Мастика</div>
+                                 <p class="product__info-text">
+                                    Жидкие гидроизоляционные материалы получаются путем смешивания нефтяного битума,
+                                    наполнителей, модифицирующих добавок и органических растворителей для улучшения их
+                                    качества.
+                                    <br /><br />
+                                    Затем полученная однородная вязкая масса наносится на горизонтальную поверхность
+                                    шпателем или разравнивается специальными гребками при помощи налива. После
+                                    отверждения мастика образует монолитный пластичный гидроизоляционный слой.
+                                 </p>
+                                 <div class="product__info-button">
+                                    <a href="#feedback" data-anchor class="button button--solid"> Оставить заявку </a>
+                                 </div>
+                              </div>
+                              <div class="product__images">
+                                 <img src="/assets/images/product/mastika.png" alt="" load='lazy' />
                               </div>
                            </div>
                         </div>
@@ -516,15 +614,12 @@
                      </li>
 
                      <li class="footer__info-item">
-                        Email:<a href="mailto:lkm-trade@yandex.ru"
-                           >lkm-trade@yandex.ru</a
-                        >
+                        Email:<a href="mailto:lkm-trade@yandex.ru">lkm-trade@yandex.ru</a>
                      </li>
                      <li class="footer__info-item">
                         Адрес: Республика Татарстан, Казань, <br />
                         Офис: Улица Достоевского, 52 <br />
-                        Производство: Улица Тэцевская 295 Производство\Склад:
-                        Улица. 3я Кленовая, 9
+                        Производство: Улица Тэцевская 295 Производство\Склад: Улица. 3я Кленовая, 9
                      </li>
 
                      <div class="show-md">
@@ -535,13 +630,7 @@
                   </ul>
                   <div class="footer__dev">
                      <a href="https://saftech.net/" target="_blank">
-                        <svg
-                           width="45"
-                           height="42"
-                           viewBox="0 0 45 42"
-                           fill="none"
-                           xmlns="http://www.w3.org/2000/svg"
-                        >
+                        <svg width="45" height="42" viewBox="0 0 45 42" fill="none" xmlns="http://www.w3.org/2000/svg">
                            <path
                               d="M26.1375 11.0022L23.2213 0.0820658C23.1962 -0.0117692 23.0566 -0.0301902 23.0026 0.0532092L4.04729 29.3192C3.97834 29.4256 4.13122 29.5353 4.23141 29.4512L26.1029 11.1054C26.1343 11.0791 26.1475 11.0397 26.1375 11.0022Z"
                               fill="#394E4E"

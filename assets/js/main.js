@@ -1,11 +1,11 @@
 $(document).ready(() => {
    // Табы
-   const tabs = $('[data-tab]')
+   const tabs = $("[data-tab]");
    $("[data-tab]").on("click", function () {
       const index = tabs.index(this);
 
       if (!$(this).hasClass("active")) {
-         const parent = $(this).closest('[data-tabs-container]');
+         const parent = $(this).closest("[data-tabs-container]");
          const tabs = parent.find("[data-tab]");
          const block = parent.find("[data-tab-content]");
 
@@ -14,6 +14,16 @@ $(document).ready(() => {
          block.hide().eq(index).show();
       }
    });
+
+   $("#fileInput").change(function () {
+      // Получаем название файла
+      var fileName = $(this).val().split("\\").pop();
+
+      // Выводим название файла рядом с инпутом
+      $(".input__file-name").text("Название файла: " + fileName);
+   });
+
+   
 
    // Якорь
    const href = localStorage.getItem("section");
@@ -67,9 +77,9 @@ $(document).ready(() => {
    });
 
    $("[data-modal-open]").on("click", function (e) {
-      e.preventDefault()
-      const modal = $(this).attr('data-modal-open')
-      $(`[data-modal=${modal}]`).addClass('open')
+      e.preventDefault();
+      const modal = $(this).attr("data-modal-open");
+      $(`[data-modal=${modal}]`).addClass("open");
    });
 
    // Слайдер
@@ -98,12 +108,17 @@ $(document).ready(() => {
          };
       }
 
-      if(sliderType === "vacancies") {
+      if (sliderType === "vacancies") {
          settings = {
             ...settings,
-            slidesPerView: 5,
-            loop:false
-         }
+            slidesPerView: 4,
+            loop: false,
+            breakpoints: {
+               1200: {
+                  slidesPerView: 5
+               }
+            }
+         };
       }
 
       if (sliderType === "news") {

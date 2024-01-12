@@ -141,6 +141,14 @@
    align-items: start;
 }
 
+.vacancies__form{
+   color: black;
+}
+
+.vacancies__form .file-field{
+   margin: 21px 0;
+}
+
 @media (max-width: 1200px) {
    .vacancies__card-name {
       font-size: 32px;
