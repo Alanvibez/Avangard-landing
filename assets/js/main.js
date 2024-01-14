@@ -23,8 +23,6 @@ $(document).ready(() => {
       $(".input__file-name").text("Название файла: " + fileName);
    });
 
-   
-
    // Якорь
    const href = localStorage.getItem("section");
 
@@ -48,10 +46,7 @@ $(document).ready(() => {
       e.preventDefault();
       const targetSection = $(this).attr("href");
 
-      if (
-         $(this).closest(".header__menu") &&
-         $("[data-burger]").hasClass("active")
-      ) {
+      if ($(this).closest(".header__menu") && $("[data-burger]").hasClass("active")) {
          $("[data-burger]").click();
       }
 
@@ -87,14 +82,16 @@ $(document).ready(() => {
       const $parent = $(this);
       const $slider = $parent.find("[data-slider]")[0];
       const sliderType = $parent.find("[data-slider]").attr("data-slider");
+      const rightArrow = $parent.find("[data-slider-arrow=right]")[0];
+      const leftArrow = $parent.find("[data-slider-arrow=left]")[0];
 
       let settings = {
          direction: "horizontal",
          loop: true,
          initialSlide: 1,
          navigation: {
-            nextEl: $parent.find("[data-slider-arrow=right]")[0],
-            prevEl: $parent.find("[data-slider-arrow=left]")[0]
+            nextEl: rightArrow,
+            prevEl: leftArrow
          }
       };
 
@@ -108,7 +105,7 @@ $(document).ready(() => {
          };
       }
 
-      if (sliderType === "vacancies") {
+      if (sliderType === "product") {
          settings = {
             ...settings,
             slidesPerView: 4,
@@ -119,6 +116,23 @@ $(document).ready(() => {
                }
             }
          };
+
+         const switchTabs = (direction) => {
+            const tabs = $parent.find("[data-tab]");
+            const currentIndex = tabs.index(tabs.filter(".active"));
+        
+            if ((currentIndex === 0 && direction === "left") || (currentIndex === tabs.length - 1 && direction === "right")) {
+                return;
+            }
+        
+            const newIndex = direction === "right" ? currentIndex + 1 : currentIndex - 1;
+        
+            tabs.removeClass("active").eq(newIndex).trigger('click').addClass("active")
+        };
+
+         $(rightArrow).on("click", () => switchTabs("right"));
+
+         $(leftArrow).on("click", () => switchTabs("left"));
       }
 
       if (sliderType === "news") {
@@ -132,10 +146,7 @@ $(document).ready(() => {
             }
          };
 
-         if (
-            $parent.find(".swiper-slide").length <= 2 &&
-            $(window).width() >= 900
-         ) {
+         if ($parent.find(".swiper-slide").length <= 2 && $(window).width() >= 900) {
             $parent.find(".slider-arrows").remove();
          }
       }
