@@ -33,7 +33,7 @@ $(document).ready(function () {
 
       // Отправляем данные
       $.ajax({
-         url: "contact.php",
+         url: "../contact.php",
          type: "post",
          data: formData,
          processData: false,
@@ -43,7 +43,14 @@ $(document).ready(function () {
          },
          success: function (result) {
             $inputs.removeClass("error validate").val("");
-            $("[data-modal-close").click();
+            if($form.attr("data-form") === "vacancies") {
+               $modal.removeClass("open");
+               $body.css("overflow", "");
+            }
+            if($form.attr("data-form") === "feedback") {
+               $modal.addClass("open");
+               $body.css("overflow", "hidden");
+            }
          }
       });
    });
@@ -55,7 +62,6 @@ $(document).ready(function () {
          var value = $input.val();
          $form.find(".error-msg").remove();
 
-         
          const emailPattern =
             /^[-a-z0-9!#$%&'*+/=?^_`{|}~]+(?:\.[-a-z0-9!#$%&'*+/=?^_`{|}~]+)*@(?:[a-z0-9]([-a-z0-9]{0,61}[a-z0-9])?\.)*(?:aero|arpa|asia|biz|cat|com|coop|edu|gov|info|int|jobs|mil|mobi|museum|name|net|org|pro|tel|travel|[a-z][a-z])$/;
 
@@ -76,13 +82,13 @@ $(document).ready(function () {
             if (file) {
                var fileSize = file.size; // Размер файла в байтах
                var maxFileSize = 10 * 1024 * 1024; // Максимальный размер файла (в данном случае 10 MB)
-              
+
                if (fileSize > maxFileSize) {
-                  $input.addClass('error')
-                  $('.file-field').append('<div class="error-msg">Файл слишком большой</div>')
-               }else{
-                  $input.removeClass('error')
-                  $('.file-field').find('.error-msg').remove()
+                  $input.addClass("error");
+                  $(".file-field").append('<div class="error-msg">Файл слишком большой</div>');
+               } else {
+                  $input.removeClass("error");
+                  $(".file-field").find(".error-msg").remove();
                }
             } else {
                // Если файл не выбран, можно добавить сообщение об ошибке или что-то еще по вашему усмотрению
