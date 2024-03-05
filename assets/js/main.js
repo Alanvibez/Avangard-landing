@@ -108,6 +108,7 @@ $(document).ready(() => {
       if (sliderType === "product") {
          settings = {
             ...settings,
+            initialSlide: 0,
             slidesPerView: 4,
             loop: false,
             breakpoints: {
@@ -120,15 +121,18 @@ $(document).ready(() => {
          const switchTabs = (direction) => {
             const tabs = $parent.find("[data-tab]");
             const currentIndex = tabs.index(tabs.filter(".active"));
-        
-            if ((currentIndex === 0 && direction === "left") || (currentIndex === tabs.length - 1 && direction === "right")) {
-                return;
+
+            if (
+               (currentIndex === 0 && direction === "left") ||
+               (currentIndex === tabs.length - 1 && direction === "right")
+            ) {
+               return;
             }
-        
+
             const newIndex = direction === "right" ? currentIndex + 1 : currentIndex - 1;
-        
-            tabs.removeClass("active").eq(newIndex).trigger('click').addClass("active")
-        };
+
+            tabs.removeClass("active").eq(newIndex).trigger("click").addClass("active");
+         };
 
          $(rightArrow).on("click", () => switchTabs("right"));
 

@@ -54,16 +54,15 @@ button {
    position: relative;
 }
 
-.main__background{
+.main__background {
    position: absolute;
    top: 0;
    left: 0;
    z-index: -2;
    width: 100%;
-   object-fit: fill;
+   object-fit: cover;
+   height: 100%;
 }
-
-
 
 .main::before {
    content: "";
@@ -187,13 +186,18 @@ input::placeholder {
 .input.error {
    border: 1px solid rgba(221, 21, 21, 0.7);
 }
-
-.input__file{
-   font-size: 18px;
-   color: #1B1B1B;
+.error-msg{
+   color: rgba(221, 21, 21, 0.7);
+   font-size: 12px;
+   margin-top: 5px;
 }
 
-.input__file i{
+.input__file {
+   font-size: 18px;
+   color: #1b1b1b;
+}
+
+.input__file i {
    color: var(--yellow);
 }
 
@@ -263,8 +267,6 @@ input::placeholder {
    width: 50%;
 }
 
-
-
 .show-md {
    display: none !important;
 }
@@ -298,7 +300,7 @@ input::placeholder {
 }
 
 .modal__container {
-   background: #182222;
+   background: white;
    max-width: 615px;
    width: 100%;
    padding: 114px 10px 121px;
@@ -441,7 +443,7 @@ input::placeholder {
 
 @media (max-width: 420px) {
    .modal__title {
-      font-size: 18px;
+      font-size: 18px !important;
    }
 
    .modal__text {
@@ -456,5 +458,13 @@ input::placeholder {
    .modal__container {
       padding-top: 68px;
       padding-bottom: 48px;
+   }
+
+   .modal__container-close {
+      right: 10px;
+      top: 10px;
+      width: 28px;
+      height: 28px;
+      font-size: 10px;
    }
 }
