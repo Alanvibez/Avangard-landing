@@ -118,8 +118,6 @@ $(document).ready(() => {
             }
          };
 
-         
-
          const switchTabs = (direction) => {
             const tabs = $parent.find("[data-tab]");
             const currentIndex = tabs.index(tabs.filter(".active"));
